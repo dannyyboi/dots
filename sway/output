@@ -1,0 +1,22 @@
+set {
+	$4k DP-1
+	$2k HDMI-A-2
+}
+
+output $4k scale 1.5
+output $2k pos 0 0 res 2560x1440
+output $4k pos 2560 0 res 3840x2160
+output * bg /home/dan/Downloads/rocketwall.jpg fill
+
+workspace {	
+	1 output $2k
+	2 output $2k
+	3 output $2k
+	4 output $2k
+	5 output $2k
+
+	6 output $4k
+	7 output $4k
+	8 output $4k
+	9 output $4k
+}
