@@ -1,0 +1,155 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+    
+    "modules-left": ["sway/mode", "clock", "custom/separator", "disk#1", "disk#2", "custom/separator", "cpu", "memory", "temperature"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["tray" , "idle_inhibitor", "custom/separator", "network", "custom/separator", "pulseaudio", "custom/separator", "custom/power"],
+
+    "sway/mode": {
+        "format": " {}"
+    },
+    
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "disable-scroll-wraparound": true,
+        "enable-bar-scroll": false,
+        "smooth-scrolling-threshold": 1,
+        "format": "{name} ",
+        "persistent_workspaces": {
+        	"1": ["HDMI-A-2"],
+        	"2": ["HDMI-A-2"],
+            "3": ["HDMI-A-2"],
+   	        "4": ["HDMI-A-2"],
+            "5": ["HDMI-A-2"],
+            "6": ["DP-1"],
+            "7": ["DP-1"],
+            "8": ["DP-1"],
+            "9": ["DP-1"],
+        },
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",        
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }          
+    },
+    
+    "clock": {
+    	"tooltip-format": "{: %A %B %d }",
+    	"format": " {:%a  %I:%M %p}",
+    	"interval": 1
+	},
+	
+	"custom/separator": {
+		"format": "|",
+		"tooltip": false
+	}
+	,
+	"disk#1": {
+		"states": {
+			"good": 0,
+			"warning": 70,
+			"critical": 95
+		},
+		"interval": 5,
+		"format": "{percentage_used:2}%",
+		"path": "/"
+	},
+	
+	"disk#2": {
+		"states": {
+			"good": 0,
+			"warning": 70,
+			"critical": 95
+		},
+		"interval": 5,
+		"format": "{percentage_used:2}% ",
+		"path": "/data"
+	},
+	
+	"cpu": {
+		"format": " {usage}%",
+  		"on-click": "kitty htop",
+  		"tooltip": false
+	},
+	
+	"memory": {
+    	"interval": 30,
+    	"format": " {}%",
+        "on-click": "kitty htop"
+    },
+    
+    "temperature": {
+    	"interval": 5,
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": " {temperatureC}°C ",
+        "tooltip": false
+    },
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "network": {
+        "interface": "wlo1", // (Optional) To force the use of this interface
+        "format": " Disabled",
+        "format-wifi": "  {essid} ",
+        "format-ethernet": "  {ifname} ",
+        "format-disconnected": " ⚠ Disconnected ",
+        "on-click": "networkmanager_dmen",
+        "tooltip": false
+    },
+    
+	"pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted":"muted ",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["","墳",""]
+        },
+        "tooltip": false,
+        "on-click": "kitty pulsemixer"
+    },
+    
+    "tray": {
+        "icon-size": 15,
+        "spacing": 5
+    },
+
+    "custom/power": {
+      	"format":" ⏻ ",
+       	"on-click": "nwg-bar",
+      	"tooltip": false,
+    },
+    "custom/separator": {
+    	"format": "|",
+    	"tooltip": false
+    },
+}
+
+

@@ -1,0 +1,76 @@
+@import './colors.css';
+
+* {
+    color: @font;
+    border: none;
+    border-radius: 0;
+    padding: 0 0;
+    font-family:Nerd Font Hack;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.modules-left {
+	background: @bg;
+	border-radius: 4;	
+}
+
+.modules-center {
+    background: @bg;
+    border-radius: 4;
+}
+
+.modules-right {
+	background: @bg;
+	border-radius: 4;	
+}
+
+window#waybar {
+	background: transparent;
+}
+
+#workspaces button {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#workspaces button.focused {
+    border-bottom: 2px solid @font;
+    border-radius: 4;
+}
+
+#workspaces button:hover{
+	background: transparent;
+    border-radius: 4;	
+}
+
+#mode {
+    color: @font;
+}
+
+#mode, #clock, #disk.1, #disk.2, #cpu, #memory, #temperature, #idle_inhibitor, #network, #pulseaudio,  #custom-power {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#custom-separator {
+	color: @gray;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#idle_inhibitor{
+	padding-left: 20px;
+	padding-right: 10px;	
+}
+
+#custom-power {
+	padding-right: 10px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
