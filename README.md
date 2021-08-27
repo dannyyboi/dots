@@ -5,5 +5,6 @@
     * kitty
     * sway
     * swaylock
+    * waybar
     * wofi
     
